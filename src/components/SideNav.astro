@@ -1,0 +1,25 @@
+---
+// External imports
+import { Icon } from "astro-icon/components";
+
+// Data imports
+import socials from "@data/socials.js";
+---
+
+<aside
+  class="z-10 fixed inset-y-1/2 left-4 md:left-8 border border-white rounded shadow-xl h-32 w-12"
+>
+  <div class="flex flex-col justify-around items-center h-full">
+    {
+      socials.map((social) => (
+        <a
+          href={social.link}
+          target="_blank"
+          class="animate-wiggle hover:animate-none"
+        >
+          <Icon name={social.icon} class="text-3xl" />
+        </a>
+      ))
+    }
+  </div>
+</aside>

@@ -1,0 +1,30 @@
+---
+// External imports
+import "@fontsource/gotu";
+// Internal imports
+import { ViewTransitions } from "astro:transitions";
+
+// Components
+import Header from "@components/Header.astro";
+import SideNav from "@components/SideNav.astro";
+import Footer from "@components/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>Rick Tun | {title}</title>
+  </head>
+  <body class="font-gotu text-clear min-h-screen bg-hero-gradient">
+    <Header />
+    <SideNav />
+    <slot />
+    <Footer />
+  </body>
+</html>
