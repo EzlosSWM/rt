@@ -1,0 +1,19 @@
+---
+// External imports
+import { Icon } from "astro-icon/components";
+
+// Internal imports
+const { isCol } = Astro.props;
+
+// Data imports
+import contacts from "@data/contactInfo.js";
+---
+
+{
+  contacts.map((contact) => (
+    <div class="flex items-center space-x-2">
+      <Icon name={contact.icon} />
+      <h3>{contact.detail}</h3>
+    </div>
+  ))
+}

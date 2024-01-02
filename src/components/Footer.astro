@@ -2,15 +2,18 @@
 // External imports
 import { Icon } from "astro-icon/components";
 
+// Components
+import Contact from "@partials/SingleContact.astro";
+
 // Data imports
+import contacts from "@data/contactInfo.js";
 import socials from "@data/socials.js";
 ---
 
 <footer class="bg-clear text-black">
   <section class="mx-auto max-w-4xl py-8 px-4 grid space-y-4">
     <div class="flex items-center space-x-4 justify-evenly">
-      <h3>info@mysite.com</h3>
-      <h3>Tel: 501-123-4567</h3>
+      <Contact />
     </div>
     <div class="flex items-center justify-center space-x-8">
       {
