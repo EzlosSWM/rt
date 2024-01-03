@@ -21,10 +21,12 @@ const { title } = Astro.props;
     <ViewTransitions />
     <title>Rick Tun | {title}</title>
   </head>
-  <body class="font-gotu text-clear min-h-screen bg-hero-gradient">
+  <body class="font-gotu text-black min-h-screen bg-clean">
     <Header />
     <SideNav />
-    <slot />
+    <div class="shadow-center">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

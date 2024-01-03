@@ -1,0 +1,77 @@
+---
+// External imports
+import "@fontsource/aboreto";
+
+// Components
+import Contacts from "@partials/SingleContact.astro";
+// Data imports
+---
+
+<!-- Contact form  --><!-- contact section -->
+<section class="bg-white text-black px-12">
+  <div class="max-w-6xl mx-auto px-4 py-8 md:flex">
+    <div class="md:w-1/2 px-4 py-8">
+      <h3 class="font-aboreto font-bold text-2xl">Get in touch</h3>
+      <p class="text-sm my-8">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+        ratione praesentium voluptate ex dolorem facere velit aut ad, voluptatem
+        laboriosam quis et repellat delectus molestiae ut assumenda molestias
+        saepe itaque.
+      </p>
+
+      <Contacts />
+    </div>
+
+    <form class="space-y-4 md:w-1/2 mx-auto last:text-center px-4 py-8">
+      <div
+        class="flex md:flex-row flex-col md:space-x-4 space-y-2 md:space-y-0"
+      >
+        <div class="flex flex-col space-y-2 w-full">
+          <label class="font-bold text-start" for="firstname">First name</label>
+          <input
+            type="text"
+            class="border border-gray-200 px-2 py-1 rounded focus:outline-gray-400 text-black"
+          />
+        </div>
+
+        <div class="flex flex-col space-y-2 w-full">
+          <label class="font-bold text-start" for="lastname">Last name</label>
+          <input
+            type="text"
+            class="border border-gray-200 px-2 py-1 rounded focus:outline-gray-400 text-black"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <label class="font-bold text-start" for="email">Email</label>
+        <input
+          type="text"
+          class="border border-gray-200 px-2 py-1 rounded focus:outline-gray-400 text-black"
+        />
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <label class="font-bold text-start" for="tel">Phone number</label>
+        <input
+          type="tel"
+          class="border border-gray-200 px-2 py-1 rounded focus:outline-gray-400 text-black"
+        />
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <label class="font-bold text-start" for="msg">Message</label>
+        <textarea
+          rows="4"
+          class="border border-gray-200 px-2 py-1 rounded focus:outline-gray-400 text-black"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="rounded px-4 py-2 sm:w-1/3 w-full md:w-1/2 mx-auto shadow hover:shadow-xl font-bold font-aboreto bg-browns hover:bg-clean text-white hover:text-black"
+        >Send Message</button
+      >
+    </form>
+  </div>
+</section>
