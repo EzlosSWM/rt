@@ -3,8 +3,13 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      boxShadow: {
+        center:
+          "0 0px 10px 1px rgb(0 0 0 / 0.1), 0 0 10px -1px rgb(0 0 0 / 0.1)",
+      },
       colors: {
         clear: "#FEFAE0",
+        browns: "#B99470",
         clean: "rgba(254, 250, 224, 0.3)",
       },
       keyframes: {
