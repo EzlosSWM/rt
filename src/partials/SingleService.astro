@@ -1,0 +1,21 @@
+---
+// External imports
+import { Icon } from "astro-icon/components";
+
+// Internal imports
+const { icon, title } = Astro.props;
+
+// Data imports
+import services from "@data/services.ts";
+---
+
+{
+  services.map((service) => (
+    <div class="font-sacramento h-56 w-44 rounded bg-red-800 text-white">
+      <div class="h-full flex flex-col justify-center items-center space-y-4">
+        <Icon name={service.icon} class="text-4xl" />
+        <p class="px-4 text-center text-3xl">{service.title}</p>
+      </div>
+    </div>
+  ))
+}

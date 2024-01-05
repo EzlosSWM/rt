@@ -1,0 +1,13 @@
+---
+// Component imports
+import Service from "@partials/SingleService.astro";
+
+// Data imports
+import services from "@data/services.js";
+---
+
+{
+  services.map((service) => (
+    <Service icon={service.icon} title={service.title} />
+  ))
+}
