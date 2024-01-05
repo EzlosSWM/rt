@@ -8,9 +8,29 @@ import "@fontsource/sacramento";
 import about from "@landing/about.jpeg";
 import contact from "@landing/contact.jpg";
 import nature from "@landing/nature.jpg";
+import service from "@landing/wedding.jpg";
 ---
 
 <div class="font-sacramento">
+  <!--Nature-->
+  <section
+    class="relative h-52 md:h-72 w-full grayscale ease-in-out duration-500 hover:grayscale-0"
+  >
+    <Image
+      src={service}
+      alt="Nature section link"
+      class="absolute -z-10 h-full object-cover object-bottom"
+      quality={"mid"}
+    />
+    <div class="h-full grid place-items-center">
+      <a
+        href="/services/"
+        class="border border-clean rounded w-1/3 p-2 hover:bg-transparent text-center hover:text-white backdrop-blur-sm shadow-xl text-3xl bg-clean text-black"
+        >Services</a
+      >
+    </div>
+  </section>
+
   <!--Nature-->
   <section
     class="relative h-52 md:h-72 w-full grayscale ease-in-out duration-500 hover:grayscale-0"
@@ -62,7 +82,7 @@ import nature from "@landing/nature.jpg";
     />
     <div class="h-full grid place-items-center">
       <a
-        href="#"
+        href="/contact/"
         class="border border-clean rounded w-1/3 p-2 hover:bg-transparent text-center hover:text-white backdrop-blur-sm shadow-xl text-3xl bg-clean text-black"
         >Contact</a
       >
