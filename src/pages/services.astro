@@ -5,18 +5,19 @@ import "@fontsource/sacramento";
 
 // Components
 import Base from "@layouts/Base.astro";
-import Service from "@partials/SingleService.astro";
+// import Service from "@partials/SingleService.astro";
 
 // Data imports
-import services from "@data/services.ts";
+import Service from "@components/Services.astro";
 ---
 
 <Base>
-  <main class="max-w-4xl mx-auto p-8 px-12">
-    <h1 class="font-bold font-aboreto text-3xl text-center">Services</h1>
+  <div class="bg-gray-950">
+  <main class="max-w-4xl mx-auto p-8 px-12 lg:px-2">
+    <h1 class="font-bold font-aboreto text-3xl text-white text-center mb-4">Services</h1>
     <div class="space-y-8">
-      <!-- box -->
       <Service />
     </div>
   </main>
+  </div>
 </Base>

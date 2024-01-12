@@ -9,7 +9,7 @@ export default {
       },
       colors: {
         clear: "#FEFAE0",
-        browns: "#B99470",
+        browns: "#783d19",
         clean: "rgba(254, 250, 224, 0.3)",
       },
       keyframes: {
