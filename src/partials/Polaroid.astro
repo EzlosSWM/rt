@@ -1,0 +1,61 @@
+---
+// External imports
+import "@fontsource/gotu";
+import "@fontsource/sacramento";
+---
+
+<!-- container -->
+<div class="font-sacramento text-black text-center group flex">
+  <!-- left polaroid -->
+  <div
+    class="relative p-4 bg-clear shadow-polaroid rounded-md group-hover:animate-hideLeft polaroid left--polaroid"
+  >
+    <div class="h-1/2 shadow-img rounded-md w-full mx-auto polaroid--img"></div>
+  </div>
+  <!-- main polaroid -->
+  <div
+    class="z-10 bg-clear shadow-polaroid rounded-md polaroid flex main--polaroid"
+  >
+    <div class="p-4 grid grid-rows-2">
+      <div class="shadow-img rounded-md h-full w-full mx-auto polaroid--img">
+      </div>
+      <div class="my-auto polaroid--content">
+        <h3 class="text-3xl">Wedding</h3>
+        <h5 class="my-1">12-23-2025</h5>
+        <p class="font-gotu text-xs">
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- right polaroid -->
+  <div
+    class="relative p-4 bg-clear shadow-polaroid rounded-md group-hover:animate-hideRight polaroid right--polaroid"
+  >
+    <div class="h-1/2 shadow-img rounded-md w-full polaroid--img"></div>
+  </div>
+</div>
+
+<style>
+  .polaroid {
+    width: 15rem;
+    height: 18rem;
+  }
+
+  .left--polaroid {
+    left: 12.5rem;
+    rotate: -5deg;
+  }
+
+  .right--polaroid {
+    left: -12.5rem;
+    rotate: 5deg;
+  }
+
+  /* content */
+
+  .polaroid--img {
+    background-color: black;
+  }
+</style>

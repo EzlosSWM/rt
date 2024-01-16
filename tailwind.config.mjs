@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {
       boxShadow: {
+        img: "0 0 3px 1px rgba(0,0,0,0.3)",
+        polaroid: "0 0 10px 1px rgba(0,0,0,0.3)",
         center:
           "0 0px 10px 1px rgb(0 0 0 / 0.1), 0 0 10px -1px rgb(0 0 0 / 0.1)",
       },
@@ -17,8 +19,24 @@ export default {
           "0%, 100%": { transform: "rotate(-10deg)" },
           "50%": { transform: "rotate(10deg)" },
         },
+        hideLeft: {
+          "100%": {
+            left: "15rem",
+            rotate: "0deg",
+            boxShadow: "0 0 10px 1px rgba(0,0,0,0)",
+          },
+        },
+        hideRight: {
+          "100%": {
+            left: "-15rem",
+            rotate: "0deg",
+            boxShadow: "0 0 10px 1px rgba(0,0,0,0)",
+          },
+        },
       },
       animation: {
+        hideLeft: "hideLeft 0.5s ease-in-out forwards",
+        hideRight: "hideRight 0.5s ease-in-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
         bounce: "bounce 3s infinite",
       },
