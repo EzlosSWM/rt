@@ -4,10 +4,19 @@ import Base from "@layouts/Base.astro";
 
 // Components
 import Polaroid from "@partials/Polaroid.astro";
+
+// Data imports 
+import thumbnails from "@data/gallery-thumbnails.js"
 ---
 
-<Base>
-  <main class="max-w-4xl mx-auto p-8 grid place-items-center">
-    <Polaroid />
-  </main>
+<Base title="Gallery">
+  <main class="max-w-4xl mx-auto p-8">
+    <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-full">
+    {
+        thumbnails.map((thumbnail) => (
+            <Polaroid img={thumbnail.img} alt={thumbnail.alt}>{thumbnail.title}</Polaroid>
+        ))
+    }
+    </div>
+    </main>
 </Base>

@@ -21,15 +21,15 @@ export default {
         },
         hideLeft: {
           "100%": {
-            left: "15rem",
-            rotate: "0deg",
+            left: "12rem",
+            transform: "rotate(0deg)",
             boxShadow: "0 0 10px 1px rgba(0,0,0,0)",
           },
         },
         hideRight: {
           "100%": {
-            left: "-15rem",
-            rotate: "0deg",
+            right: "12rem",
+            transform: "rotate(0deg)",
             boxShadow: "0 0 10px 1px rgba(0,0,0,0)",
           },
         },

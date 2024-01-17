@@ -10,7 +10,8 @@
       "@utils/*": ["src/utils/*"],
       "@assets/*": ["src/assets/*"],
       "@landing/*": ["src/assets/landing/*"],
-      "@about/*": ["src/assets/about/*"]
+      "@about/*": ["src/assets/about/*"],
+      "@thumbnail/*": ["src/assets/gallery/*"]
     }
   }
 }
