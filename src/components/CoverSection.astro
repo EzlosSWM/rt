@@ -1,91 +1,19 @@
 ---
 // External imports
-import { Image } from "astro:assets";
-
 import "@fontsource/sacramento";
 
+// Components 
+import Covers from "@partials/Covers.astro";
+
 // Data imports
-import about from "@landing/about.jpeg";
-import contact from "@landing/contact.jpg";
-import nature from "@landing/nature.jpg";
-import service from "@landing/wedding.jpg";
+import landings from "@data/landing.js";
+
 ---
 
 <div class="font-sacramento">
-  <!--Nature-->
-  <section
-    class="relative h-52 md:h-72 w-full grayscale ease-in-out duration-500 hover:grayscale-0"
-  >
-    <Image
-      src={service}
-      alt="Nature section link"
-      class="absolute -z-10 h-full object-cover object-bottom"
-      quality={"mid"}
-    />
-    <div class="h-full grid place-items-center">
-      <a
-        href="/services/"
-        class="border border-clean rounded w-1/3 p-2 hover:bg-transparent text-center hover:text-white backdrop-blur-sm shadow-xl text-3xl bg-clean text-black"
-        >Services</a
-      >
-    </div>
-  </section>
-
-  <!--Nature-->
-  <section
-    class="relative h-52 md:h-72 w-full grayscale ease-in-out duration-500 hover:grayscale-0"
-  >
-    <Image
-      src={nature}
-      alt="Nature section link"
-      class="absolute -z-10 h-full object-cover object-bottom"
-      quality={"mid"}
-    />
-    <div class="h-full grid place-items-center">
-      <a
-        href="#"
-        class="border border-clean rounded w-1/3 p-2 hover:bg-transparent text-center hover:text-white backdrop-blur-sm shadow-xl text-3xl bg-clean text-black"
-        >Nature</a
-      >
-    </div>
-  </section>
-
-  <!--About-->
-  <section
-    class="relative h-52 md:h-72 w-full grayscale ease-in-out duration-500 hover:grayscale-0"
-  >
-    <Image
-      src={about}
-      alt="About section link"
-      class="absolute -z-10 h-full object-cover object-bottom"
-      quality={"mid"}
-    />
-    <div class="h-full grid place-items-center">
-      <a
-        href="/about/"
-        class="border border-clean rounded w-1/3 p-2 hover:bg-transparent text-center hover:text-white backdrop-blur-sm shadow-xl text-3xl bg-clean text-black"
-        transition:animate="slide"
-        transition:name="about">About</a
-      >
-    </div>
-  </section>
-
-  <!--Contact-->
-  <section
-    class="relative h-52 md:h-72 w-full grayscale ease-in-out duration-500 hover:grayscale-0"
-  >
-    <Image
-      src={contact}
-      alt="Contact section link"
-      class="absolute -z-10 h-full object-cover object-bottom"
-      quality={"mid"}
-    />
-    <div class="h-full grid place-items-center">
-      <a
-        href="/contact/"
-        class="border border-clean rounded w-1/3 p-2 hover:bg-transparent text-center hover:text-white backdrop-blur-sm shadow-xl text-3xl bg-clean text-black"
-        >Contact</a
-      >
-    </div>
-  </section>
+    {
+        landings.map((landing) => (
+            <Covers alt={landing.alt} img={landing.img} link={landing.link}>{landing.title}</Covers>
+        ))
+    }
 </div>
