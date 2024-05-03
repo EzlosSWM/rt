@@ -1,0 +1,15 @@
+---
+// internal imports 
+import { Image } from "astro:assets";
+
+// data imports
+import homeImages from "@data/heroGallery.js";
+---
+
+<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 [&>*:nth-child(4)]:h-full [&>*:nth-child(4)]:object-cover">
+    {
+        homeImages.map((image) => (
+            <Image src={image.img} alt={image.alt} class="rounded-sm shadow-md"/>
+        ))
+    }
+</div>

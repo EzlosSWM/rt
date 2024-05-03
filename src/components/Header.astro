@@ -1,25 +1,71 @@
 ---
-// External imports
+// astro imports 
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
-import logo from "@assets/logo.svg";
+// images
+import logo from "@images/camera-logo.png";
 
-// Data imports
-import navData from "@data/nav.ts";
+// components 
+import Nav from "@components/Navbar.astro";
 ---
+<!-- header starts -->
+<header>
+    <nav class="">
+        <div class="px-8 py-4 max-w-5xl mx-auto flex justify-between items-center">
+            <!-- logo -->
+            <a href="/">
+                <Image src={logo} alt="Logo" class="w-16 md:w-20" />  
+            </a>
 
-<header class="z-50 backdrop-blur-lg bg-clean sticky top-0">
-  <nav class="max-w-4xl mx-auto space-y-2 py-4 px-2 text-center">
-    <a href="/" class="mx-auto w-32">
-      <Image
-        src={logo}
-        alt="Ricardo Tun logo"
-        class="mx-auto w-32 max-w-full"
-      />
-    </a>
+            <!-- hamburger menu -->
+            <button id="nav-menu" class="md:hidden">
+                <Icon name="clarity:menu-line" title="Menu" width={36} height={36} /> 
+            </button>
 
-    <div class="space-x-4 tracking text-lg">
-      {navData.map((nav) => <a href={nav.link}>{nav.title}</a>)}
-    </div>
-  </nav>
+            <!-- desktop menu -->
+            <div class="hidden md:flex">
+                <Nav />
+            </div>
+        </div>
+
+
+        <!-- mobile menu -->
+        <div id="mobile-menu" class="bg-primary-light hidden z-50 fixed top-0 overflow-x-hidden overflow-y-auto w-screen h-full text-accent-dark">
+            <div class="text-center font-medium uppercase">
+                <div class="h-screen space-y-8 px-4 py-2 flex flex-col justify-between">
+                    <!-- close menu -->
+                    <button id="close-btn" class="w-fit ml-auto hidden hover:text-accent-gray">
+                        <Icon name="clarity:close-line" title="Close menu" width={36} height={36} /> 
+                    </button>
+
+                    <Nav /> 
+
+                    <a class="mx-auto pb-12" href="https://www.instagram.com/r__e.photography/" class="w-full h-12" target="_blank">
+                        <Icon name="mdi:instagram" width={52}/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu ends -->
+    </nav>
 </header>
+<!-- header ends -->
+
+<script>
+let navMenu = document.getElementById("nav-menu");
+let mobileMenu = document.getElementById("mobile-menu");
+let closeBtn = document.getElementById("close-btn");
+
+navMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
+    closeBtn.classList.toggle("hidden");
+})
+
+closeBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
+    closeBtn.classList.toggle("hidden");
+})
+</script>

@@ -1,24 +1,43 @@
 ---
-// External imports
-import "@fontsource/sacramento";
-import "@fontsource/aboreto";
+// components 
+import HeroGallery from "@components/HeroGallery.astro";
+import Base from "@layout/Base.astro";
+import Section from "@layout/Section.astro";
 
-// Component imports
-import Base from "@layouts/Base.astro";
-import CoverSection from "@components/CoverSection.astro";
+// data imports 
+import about from "@data/aboutMe.js";
 ---
+<Base>
+    <!-- hero section -->
+    <main class="px-0 sm:px-4 md:px-8 py-4 space-y-4">
+        <div class="h-screen bg-hero bg-cover text-primary-light grayscale-[50%]">
+            <!--Image alt="hero image" src={hero} class="absolute object-cover h-full -z-10" quality={"high"}/-->
+            <div class="text-right px-4 md:px-0 flex flex-col items-center justify-center h-full space-y-24">
+                <h1 class="text-6xl font-semibold">Rick's Photo</h1>
 
-<Base title="Home">
-  <section
-    class="h-[50vh] pb-16 space-y-4 flex flex-col justify-end items-center"
-  >
-    <h1 class="font-aboreto text-3xl md:text-7xl font-bold leading-wide">
-      Ricardo Tun
-    </h1>
-    <h3 class="font-sacramento italic tracking-wider text-3xl md:text-5xl">
-      Photography
-    </h3>
-  </section>
+                <h4 class="text-2xl font-thin">Capturing Memories, One Frame at a Time</h5>
+            </div>
+        </div>
 
-  <CoverSection />
+
+    </main>
+    <!-- hero section ends -->
+
+
+    <section class="px-8 sm:px-24 md:px-32 py-4 space-y-4">
+        <HeroGallery /> 
+    </section>
+
+
+    <!-- about section -->
+    <section class="px-4 md:px-8 py-4 space-y-4">
+        <!-- lines -->
+        <div class="flex justify-between items-center w-4/5 space-x-2 mx-auto">
+            <div class="h-[0.5px] w-2/5 bg-neutral-800"></div>
+            <div class="h-2 w-2 bg-neutral-800 rounded-full"></div>
+            <div class="h-[0.5px] w-2/5 bg-neutral-800"></div>
+        </div>
+        <!-- lines end -->
+    </section>
+    <!-- about section ends -->
 </Base>
