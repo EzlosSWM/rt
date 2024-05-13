@@ -4,7 +4,7 @@ export default {
 	theme: {
         extend: {
             backgroundImage: {
-                'hero': "url('./src/assets/profile.jfif')",
+                'hero': "url('/src/assets/profile.jfif')",
             },
             colors: {
                 'primary': {
