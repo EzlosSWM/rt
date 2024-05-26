@@ -1,46 +1,48 @@
 ---
 // internal imports 
 import { Image } from "astro:assets"
+
 // components
 import Base from "@layout/Base.astro";
-import Section from "@layout/Section.astro";
-
 
 // images 
 import profile from "@images/profile.jfif"
+import banner from "@images/about/banner.jpg"
 ---
 <Base>
-    <div>
-    <Image alt="Profile" src={profile} width={1000} height={1000} class="w-full mx-auto" />
     <section class="px-4 sm:px-4 md:px-8 py-4 space-y-4">
-        <div class="space-y-4">
-            <h3 class="text-2xl font-medium">Meet Your Photographer</h3>
+        <div class="space-y-8 text-center md:text-left">
+            <Image alt="Profile" src={profile} width={1000} height={1000} class="h-96 lg:h-[36rem] object-cover object-top w-full mx-auto" />
+            <div class="space-y-4 text-center md:text-left lg:mx-auto lg:max-w-6xl">
+                <p class="text-4xl font-semibold">About</p>
+                <h3 class="text-2xl font-medium">Meet Your Photographer</h3>
 
-             <p class="italic font-thin">Capturing memories, One Frame at a Time </p>
+                 <p class="italic font-thin">Capturing memories, One Frame at a Time </p>
 
-             <p>Hello there! I'm Ricardo Tun, a passionate storyteller and visual artist with a camera in hand and a heart full of love for capturing life's most precious moments. I’ve dedicated myself to immortalizing the beauty and emotions of your special day through my lens.</p>
+                 <p>Hello there! I'm Ricardo Tun, a passionate storyteller and visual artist with a camera in hand and a heart full of love for capturing life's most precious moments. I’ve dedicated myself to immortalizing the beauty and emotions of your special day through my lens.</p>
 
-            <h3 class="text-2xl font-medium">About Me</h3>
-             I believe in the magic of love and the power of photography to preserve its essence for eternity. I am committed to documenting every heartfelt moment of your special day with authenticity and artistry.
+                <h3 class="text-2xl font-medium">About Me</h3>
+                 I believe in the magic of love and the power of photography to preserve its essence for eternity. I am committed to documenting every heartfelt moment of your special day with authenticity and artistry.
 
-             <h3 class="text-2xl font-medium">My Approach</h3>
-             <p>My photography style can be described as timeless, romantic, and candid. I strive to blend into the background, allowing you to fully immerse yourselves in the magic of your special day while I discreetly capture the genuine emotions and spontaneous moments that unfold. Whether it's a stolen glance between partners or the laughter shared among family and friends, I aim to preserve the essence of your story in every image.</p>
+                 <h3 class="text-2xl font-medium">My Approach</h3>
+                 <p>My photography style can be described as timeless, romantic, and candid. I strive to blend into the background, allowing you to fully immerse yourselves in the magic of your special day while I discreetly capture the genuine emotions and spontaneous moments that unfold. Whether it's a stolen glance between partners or the laughter shared among family and friends, I aim to preserve the essence of your story in every image.</p>
 
-             <h3 class="text-2xl font-medium">Why Choose Me</h3>
-             <p>Choosing a photographer is a deeply personal decision, and I am honored by the opportunity to be entrusted with preserving your memories. With a keen eye for detail and a commitment to excellence, I promise to deliver a stunning collection of images that not only reflect the beauty of your day but also evoke the emotions and memories that make it truly unforgettable.</p>
+                 <h3 class="text-2xl font-medium">Why Choose Me</h3>
+                 <p>Choosing a photographer is a deeply personal decision, and I am honored by the opportunity to be entrusted with preserving your memories. With a keen eye for detail and a commitment to excellence, I promise to deliver a stunning collection of images that not only reflect the beauty of your day but also evoke the emotions and memories that make it truly unforgettable.</p>
 
-             <h3 class="text-2xl font-medium">Let's Connect</h3>
-             <p>I understand that every story is unique, and I am dedicated to customizing my services to suit your individual needs and preferences. Whether you're planning an intimate elopement, a grand celebration, or anything in between, I would be delighted to discuss how we can work together to create the perfect photography experience for you.</p>
 
-             <h3 class="text-2xl font-medium">Say Hello</h3>
-             <p>If you're ready to embark on this incredible journey together, I would love to hear from you! Let's grab a coffee or schedule a virtual chat to discuss your vision for your wedding day and how I can help bring it to life through the art of photography.</p>
+                 <h3 class="text-2xl font-medium">Let's Connect</h3>
+                 <p>I understand that every story is unique, and I am dedicated to customizing my services to suit your individual needs and preferences. Whether you're planning an intimate elopement, a grand celebration, or anything in between, I would be delighted to discuss how we can work together to create the perfect photography experience for you.</p>
 
-             <p>Thank you for considering me to be a part of your special day. I can't wait to meet you and document the beginning of your beautiful life or love story!</p><br />
+                 <h3 class="text-2xl font-medium">Say Hello</h3>
+                 <p>If you're ready to embark on this incredible journey together, I would love to hear from you! Let's grab a coffee or schedule a virtual chat to discuss your vision for your wedding day and how I can help bring it to life through the art of photography.</p>
 
-             <h4 class="text-xl font-normal">Warmest wishes,</h4>
-             <p class="text-lg italic">Rick Tun 🌿<p>
+                 <p>Thank you for considering me to be a part of your special day. I can't wait to meet you and document the beginning of your beautiful life or love story!</p><br />
 
+                 <h4 class="text-xl font-normal">Warmest wishes,</h4>
+                 <p class="text-lg italic">Rick Tun 🌿<p>
+            </div>
         </div>
     </section>
-        </div>
+    <Image alt="banner" src={banner} width={1000} height={200} class="w-full h-60 object-cover object-top mx-auto" />
 </Base>

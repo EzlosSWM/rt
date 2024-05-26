@@ -1,0 +1,35 @@
+---
+// data imports 
+import contactInfo from "@data/contact.js";
+
+// layout 
+import Section from "@layout/Section.astro";
+---
+<footer class="text-left text-lg">
+    <Section>
+        <h2 class="text-4xl font-bold">Ricardo Tun</h2>
+        <div class="grid grid-cols-3 text-left">
+            <div class="space-y-2 font-thin italic">
+                <p>{contactInfo.street}</p>
+                <p>{contactInfo.district}</p>
+                <p>{contactInfo.country}</p>
+            </div>
+
+            <div class="space-y-2">
+                <div class="space-y-2 font-thin">
+                    <p>{contactInfo.phone}</p>
+                    <p>{contactInfo.email}</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-center">&copy; <span id="year"></span></p>
+    </Section>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (e) => {
+        document.getElementById("year").textContent = new Date()
+            .getFullYear().toString();
+    })
+</script>
